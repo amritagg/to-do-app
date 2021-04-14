@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskActivity"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:hint="@string/edit_task_description"
+        android:paddingBottom="16dp"
+        android:autofillHints="@string/edit_task_description"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textColor="@android:color/primary_text_light"
+        android:text="@string/priority_string"
+        android:layout_marginVertical="8dp"
+        style="@style/TextAppearance.AppCompat.Medium"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginVertical="16dp"
+        android:layout_gravity="center"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/radButton1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:layout_weight="1"
+            android:background="@color/materialRed"
+            android:text="@string/high_priority"
+            android:theme="@style/WhiteRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/radButton2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/materialOrange"
+            android:text="@string/med_priority"
+            android:theme="@style/WhiteRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/radButton3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/low_priority"
+            android:background="@color/materialYellow"
+            android:theme="@style/WhiteRadioButton"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button"
+        android:textColor="@android:color/primary_text_dark"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>
